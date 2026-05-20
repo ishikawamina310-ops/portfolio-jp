@@ -9,6 +9,7 @@ React・Next.js ベースで制作しました。
 
 ## Live Demo
 
+- Portfolio: https://portfolio-jp-78u6.vercel.app/
 - GitHub: https://github.com/ishikawamina310-ops/portfolio-jp
 
 ---
