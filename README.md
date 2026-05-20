@@ -1,36 +1,140 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mina Ishikawa Portfolio
 
-## Getting Started
+日本企業向けに構築したフルスタックエンジニア向けポートフォリオサイトです。
 
-First, run the development server:
+モダンな SaaS UI / アニメーション / 日本語ローカライズを重視し、
+React・Next.js ベースで制作しました。
+
+---
+
+## Live Demo
+
+- GitHub: https://github.com/ishikawamina310-ops/portfolio-jp
+
+---
+
+## Tech Stack
+
+### Frontend
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+
+### UI / UX
+
+- Responsive Design
+- Dark SaaS Theme
+- Japanese Localization
+- Smooth Animations
+- Timeline Layout
+- Project Showcase
+
+### Deployment
+
+- Vercel
+
+---
+
+# Screenshots
+
+## Hero Section
+
+![Hero](./public/screenshots/portfolio-hero.png)
+
+---
+
+## Experience Timeline
+
+![Experience](./public/screenshots/portfolio-experience.png)
+
+---
+
+## Projects Section
+
+![Projects](./public/screenshots/portfolio-projects.png)
+
+---
+
+# Features
+
+- 日本語UI対応
+- モダンなダークテーマ
+- アニメーション付きポートフォリオ
+- レスポンシブ対応
+- プロジェクト紹介
+- GitHub / Live Demo リンク
+- 職務経歴タイムライン
+- SaaSスタイルUI
+
+---
+
+# Experience
+
+## 株式会社オクトライズ
+
+2024.10 - Present
+
+React / Next.js / Node.js を用いた
+SaaSプロダクト開発を担当。
+
+API設計、UI改善、クラウド環境構築、
+品質向上に貢献。
+
+---
+
+## Rikkeisoft Vietnam
+
+2021.04 - 2024.02
+
+日本向けWebアプリケーション開発案件に参画。
+
+React・Node.js環境での機能開発、
+保守運用、チーム開発を経験。
+
+---
+
+## Savvycom
+
+2017.10 - 2021.03
+
+Webシステム・SaaSアプリケーション開発を担当。
+
+設計から実装、テスト、運用まで幅広く経験。
+
+---
+
+# Contact
+
+- Email: ishikawamina310@gmail.com
+- Location: Japan
+- GitHub: https://github.com/YOUR_NAME
+
+---
+
+# Local Development
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+# Deployment
 
-To learn more about Next.js, take a look at the following resources:
+This portfolio is deployed on Vercel.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# License
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT
