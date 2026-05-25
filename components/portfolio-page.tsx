@@ -56,37 +56,61 @@ export function PortfolioPage() {
           animate="visible"
           variants={fadeInUp}
           transition={{ duration: 0.7, ease: "easeOut" }}
-          className="mb-24 rounded-3xl border border-white/10 bg-white/[0.03] p-7 shadow-2xl shadow-cyan-900/10 backdrop-blur-xl md:p-12"
+          className="mb-24 overflow-hidden rounded-3xl border border-cyan-300/20 bg-gradient-to-br from-slate-900 via-[#141f3d] to-[#1b2d5a] p-7 shadow-[0_30px_120px_rgba(6,182,212,0.18)] md:p-12"
         >
-          <div className="mb-6 flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-cyan-300/90">
-            <Sparkles className="h-3.5 w-3.5" />
-            フルスタックエンジニア ポートフォリオ
-          </div>
-          <h1 className="text-4xl font-semibold tracking-tight text-white md:text-6xl">
-            {profile.nameJa}
-            <span className="mt-2 block text-xl font-normal text-slate-300 md:text-2xl">
-              {profile.nameEn}
-            </span>
-          </h1>
-          <p className="mt-4 text-xl text-slate-300 md:text-2xl">{profile.role}</p>
-          <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-400 md:text-lg">
-            {profile.stack.join(" / ")}
-            <span className="mx-2 text-slate-600">|</span>
-            {profile.headline}
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Button asChild size="lg">
-              <a href="#project">プロジェクトを見る</a>
-            </Button>
-            <Button asChild variant="secondary" size="lg">
-              <Link href={profile.github} target="_blank" rel="noreferrer">
-                <Code2 className="h-4 w-4" />
-                GitHub
-              </Link>
-            </Button>
-            <Button asChild variant="ghost" size="lg">
-              <a href="#contact">お問い合わせ</a>
-            </Button>
+          <div className="grid items-end gap-8 lg:grid-cols-[1.35fr_0.9fr]">
+            <div>
+              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-300/30 bg-cyan-300/10 px-3 py-1.5 text-xs uppercase tracking-[0.2em] text-cyan-200">
+                <Sparkles className="h-3.5 w-3.5" />
+                フルスタックエンジニア ポートフォリオ
+              </div>
+              <h1 className="text-4xl font-semibold tracking-tight text-white md:text-6xl">
+                {profile.nameJa}
+                <span className="mt-2 block text-xl font-normal text-slate-200 md:text-2xl">
+                  {profile.nameEn}
+                </span>
+              </h1>
+              <p className="mt-4 text-xl text-cyan-100 md:text-2xl">{profile.role}</p>
+              <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-300 md:text-lg">
+                {profile.headline}
+              </p>
+              <div className="mt-6 flex flex-wrap gap-2">
+                {profile.stack.map((item) => (
+                  <Badge key={item} className="border-cyan-200/30 bg-cyan-200/10 text-cyan-50 hover:bg-cyan-200/20">
+                    {item}
+                  </Badge>
+                ))}
+              </div>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Button asChild size="lg" className="bg-cyan-300 text-slate-950 hover:bg-cyan-200">
+                  <a href="#project">プロジェクトを見る</a>
+                </Button>
+                <Button asChild variant="secondary" size="lg" className="border border-white/20 bg-white/10 text-white hover:bg-white/20">
+                  <Link href={profile.github} target="_blank" rel="noreferrer">
+                    <Code2 className="h-4 w-4" />
+                    GitHub
+                  </Link>
+                </Button>
+                <Button asChild variant="ghost" size="lg" className="text-cyan-100 hover:bg-white/10 hover:text-white">
+                  <a href="#contact">お問い合わせ</a>
+                </Button>
+              </div>
+            </div>
+
+            <div className="space-y-3 rounded-2xl border border-white/15 bg-black/20 p-5 backdrop-blur-sm">
+              <p className="text-xs uppercase tracking-[0.2em] text-cyan-200/90">Core Focus</p>
+              <div className="space-y-2 text-sm text-slate-200">
+                <p className="rounded-lg border border-white/10 bg-white/5 px-3 py-2">SaaS Product Development</p>
+                <p className="rounded-lg border border-white/10 bg-white/5 px-3 py-2">Scalable API Design</p>
+                <p className="rounded-lg border border-white/10 bg-white/5 px-3 py-2">UX-focused Frontend Engineering</p>
+              </div>
+              <div className="pt-2 text-sm text-slate-300">
+                <p className="mb-1">Based in {profile.location}</p>
+                <a href={`mailto:${profile.email}`} className="text-cyan-200 hover:text-cyan-100">
+                  {profile.email}
+                </a>
+              </div>
+            </div>
           </div>
         </motion.header>
 
